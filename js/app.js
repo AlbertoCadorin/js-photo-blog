@@ -14,7 +14,7 @@ axios.get(elementList)
             // destrutturazione per perndere i dati che ci servono 
             const { title, date, url } = element;
             // inseriamo l'html sulla variabile photo
-            photo += `<div class="col position-relative" style="width: 25rem;">
+            photo += `<div class="col-lg col-md col-sm position-relative">
             <div class="card rounded-0 p-3 text-start ">
               <img src="img/pin.svg" alt="pin" class="position-absolute top-0 start-50 translate-middle">
               <img src="${url}" class="card-img-top" alt="${title}">
