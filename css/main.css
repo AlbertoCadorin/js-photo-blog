@@ -13,4 +13,9 @@ body{
 
 h1{
   font-family: "Edu TAS Beginner", cursive;
+  font-size: 70px;
+}
+
+h5{
+    font-family: "Sometype Mono", monospace;
 }
