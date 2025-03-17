@@ -1,5 +1,4 @@
 
-
 header{
     padding: 40px;
     background-image: url(../img/wall.png);
@@ -18,4 +17,30 @@ h1{
 
 h5{
     font-family: "Sometype Mono", monospace;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+  }
+.element{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 15%;
+    left: 25%;
+}
+
+
+a{
+    text-decoration: none;
 }

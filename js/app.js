@@ -1,6 +1,11 @@
 // api
 const elementList = "https://lanciweb.github.io/demo/api/pictures/";
 const cardElement = document.getElementById('card-container');
+document.getElementById("overlay").style.display = "block";
+const button = document.getElementById("butt");
+
+
+
 // variabiile vuota dove inserire html
 let photo = "";
 
@@ -14,7 +19,9 @@ axios.get(elementList)
             // destrutturazione per perndere i dati che ci servono 
             const { title, date, url } = element;
             // inseriamo l'html sulla variabile photo
-            photo += `<div class="col-lg col-md col-sm position-relative">
+            photo += `
+            <div class="col-lg col-md col-sm position-relative">
+            <a href="#" >
             <div class="card rounded-0 p-3 text-start ">
               <img src="img/pin.svg" alt="pin" class="position-absolute top-0 start-50 translate-middle">
               <img src="${url}" class="card-img-top" alt="${title}">
@@ -23,6 +30,7 @@ axios.get(elementList)
                 <p>${title}</p>
               </div>
             </div>
+            </a>
           </div>`
         });
         cardElement.innerHTML = photo
@@ -31,7 +39,4 @@ axios.get(elementList)
  .catch(error => {
     console.log(error)
 });
-
-
-
-          
+      
