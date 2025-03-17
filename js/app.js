@@ -8,9 +8,13 @@ const overlay = document.getElementById("overlay");
 const imageElement = document.getElementById('img');
 // button
 const buttonElement = document.getElementById('butt');
+// body scroll
+const body = document.querySelector('body')
 // se premo il bottone chiudo l'immagine 
 buttonElement.addEventListener('click', function(){
   overlay.classList.add("d-none");
+  // rimuovo overflow all body
+  body.classList.remove("overflow-hidden")
 });
 // variabiile vuota dove inserire html
 let photo = "";
@@ -46,6 +50,8 @@ axios.get(elementList)
           const img = this.querySelector('.card-img-top')
           imageElement.src=img.src;
           overlay.classList.replace("d-none","d-block");
+          // aggiungo overflow all body
+          body.classList.add("overflow-hidden")
         })
       })
     })
