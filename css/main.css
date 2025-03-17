@@ -9,7 +9,6 @@ body{
 }
 
 
-
 h1{
   font-family: "Edu TAS Beginner", cursive;
   font-size: 70px;
@@ -18,6 +17,7 @@ h1{
 h5{
     font-family: "Sometype Mono", monospace;
 }
+
 
 #overlay {
     position: fixed;
@@ -40,7 +40,6 @@ h5{
     left: 25%;
 }
 
-
-a{
-    text-decoration: none;
+.scroll{
+    overflow: hidden;
 }
